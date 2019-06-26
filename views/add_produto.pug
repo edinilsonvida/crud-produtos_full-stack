@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	h1 #{nome}
+	form(method='POST',action='/produtos')
+		.form-group
+			label Nome:
+			input.form-control(name='nome',type='text')
+		.form-group
+			label Preço:
+			input.form-control(name='preco',type='text')
+		.form-group
+			label Categoria:
+			input.form-control(name='categoria',type='text')
+		.form-group
+			label Descrição:
+			input.form-control(name='descricao',type='text')
+		.form-group
+			label Fabricante:
+			input.form-control(name='fabricante',type='text')
+		.form-group
+			input.btn.btn-primary(type='submit',value='Salvar')

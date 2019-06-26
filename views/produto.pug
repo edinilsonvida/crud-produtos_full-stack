@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= produto.nome
+  h5 Preço: #{produto.preco}
+  h5 Categoria: #{produto.categoria}
+  h5 Descrição: #{produto.descricao}
+  h5 Fabricante: #{produto.fabricante}
+    hr
+    a.btn.btn-primary(href='/produto/edit/'+produto._id) Editar
+    a.btn.btn-danger.delete-produto(href='#',data-id=produto._id) Excluir
+
